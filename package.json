@@ -1,0 +1,31 @@
+{
+  "name": "playwright-auto-framework",
+  "version": "1.0.0",
+  "description": "Playwright Automation Framework with TypeScript, POM, Allure & Data-Driven Testing",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --project=chromium",
+    "test:ui:all": "npx playwright test --project=chromium --project=firefox --project=webkit",
+    "test:api": "npx playwright test --project=api",
+    "test:headed": "npx playwright test --headed --project=chromium",
+    "test:debug": "npx playwright test --debug --project=chromium",
+    "test:mobile": "npx playwright test --project=mobile-chrome --project=mobile-safari",
+    "report": "npx playwright show-report",
+    "report:allure": "npx allure generate allure-results -o allure-report --clean && npx allure open allure-report",
+    "lint": "npx tsc --noEmit"
+  },
+  "keywords": ["playwright", "automation", "testing", "typescript", "pom"],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.0",
+    "@types/node": "^25.9.3",
+    "allure-playwright": "^3.10.0",
+    "csv-parse": "^7.0.0",
+    "dotenv": "^17.4.2",
+    "exceljs": "^4.4.0",
+    "typescript": "^6.0.3",
+    "winston": "^3.19.0"
+  }
+}

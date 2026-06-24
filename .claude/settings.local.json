@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx playwright install chromium)",
+      "Bash(npx tsx explore-events.ts)",
+      "Bash(npx tsx save-session.ts)",
+      "Bash(timeout 120 bash -c 'while [ ! -f auth-storage.json ]; do sleep 2; done; echo \"\"Session file found!\"\"')",
+      "Bash(CI_SESSION=f75ce1f81146a5ea628b0c0d112c79de npx playwright test tests/ui/events.spec.ts --project=chromium --reporter=list)",
+      "Bash(CI_SESSION=f75ce1f81146a5ea628b0c0d112c79de npx playwright test tests/ui/events.spec.ts --project=chromium --headed --reporter=list)",
+      "Bash(CI_SESSION=f75ce1f81146a5ea628b0c0d112c79de npx playwright test tests/ui/clients.spec.ts --project=chromium --headed --reporter=list --workers=1)",
+      "Bash(node -e \":*)",
+      "Bash(CI_SESSION=f75ce1f81146a5ea628b0c0d112c79de npx playwright test tests/ui/clients.spec.ts tests/ui/projects.spec.ts tests/ui/tasks.spec.ts tests/ui/leads.spec.ts --project=chromium --headed --reporter=list --workers=1)",
+      "Bash(CI_SESSION=f75ce1f81146a5ea628b0c0d112c79de npx playwright test tests/ui/clients.spec.ts tests/ui/leads.spec.ts tests/ui/projects.spec.ts tests/ui/tasks.spec.ts --project=chromium --headed --reporter=list --workers=1)",
+      "Bash(node explore_modules2.js)",
+      "Bash(node explore_modules3.js)",
+      "Bash(node explore_modules4.js)",
+      "Bash(node explore_modules5.js)",
+      "Bash(node explore_modules6.js)",
+      "Bash(python3 -c \":*)",
+      "Bash(python3:*)",
+      "Bash(node dashboard_explore.js)"
+    ]
+  }
+}

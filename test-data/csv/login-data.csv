@@ -1,0 +1,6 @@
+username,password,expectedResult,description
+admin@example.com,admin123,success,Valid admin credentials
+user@example.com,user123,success,Valid user credentials
+invalid@example.com,wrongpass,failure,Invalid credentials
+,admin123,failure,Empty username
+admin@example.com,,failure,Empty password
